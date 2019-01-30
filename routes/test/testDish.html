@@ -9,7 +9,11 @@
 </head>
 
 <body>
-    <button id='btn1'>菜品列表</button>
+    <button id='btn1'>获取所有菜品</button>
+    <button id="bt2">获取某一道菜品</button>
+    <button id="bt3">添加菜品</button>
+    <button id="bt4">删除菜品</button>
+    <button id="bt5">修改菜品</button>
     <script src="./axios.min.js"></script>
     <script>
         btn1.onclick = function () {
@@ -22,6 +26,14 @@
             })
         }
     </script>
+
+    <hr>
+    <h3>文件上传</h3>
+    <form action="http://127.0.0.1:8090/admin/dish/image" method="POST" enctype="multipart/form-data">
+        <input type="file" name="dishImg"><br>
+        <input type="text" name="description">
+        <input type="submit">
+    </form>
 </body>
 
 </html>
