@@ -55,7 +55,7 @@ router.post('/image', upload.single('dishImg'), (req, res) => {
     var tmpFile = req.file.path;  //临时文件名
     var suffix = req.file.originalname.substring(req.file.originalname.lastIndexOf('.')); //原始文件名中的后缀部分
     var newFile = randFileName(suffix); //目标文件名
-    fs.rename(tmpFile, 'img/dish/' + newFile, () => {
+    fs.rename(tmpFile, 'uploads/dish/' + newFile, () => {
         res.send({ code: 200, msg: 'upload succ', fileName: newFile }) //把临时文件转移
     })
 })
